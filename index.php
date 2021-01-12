@@ -187,7 +187,7 @@
                     </div>
                     <div class="col l4 offset-l2 s12">
                         <h5 class="white-text">Disclaimer</h5>
-                        <p class="grey-text text-lighten-4">Lorem ipsum...</p>
+                        <p class="grey-text text-lighten-4">This is a simple website that I made instead of studying for my exams. Even though it's made from official data, I cannot guarantee its correctness.</p>
                     </div>
                 </div>
             </div>
