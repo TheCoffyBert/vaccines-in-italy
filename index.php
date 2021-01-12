@@ -183,11 +183,11 @@
                 <div class="row">
                     <div class="col l6 s12">
                         <h5 class="white-text">Vaccines in Italy</h5>
-                        <p class="grey-text text-lighten-4">A simple (and poorly done) dashboard for checking the vaccines roll-out in Italy</p>
+                        <p class="grey-text text-lighten-4">A simple (and poorly done) dashboard to check the vaccines' roll-out in Italy</p>
                     </div>
                     <div class="col l4 offset-l2 s12">
                         <h5 class="white-text">Disclaimer</h5>
-                        <p class="grey-text text-lighten-4">This is a simple website that I made instead of studying for my exams. Even though it's made from official data, I cannot guarantee its correctness.</p>
+                        <p class="grey-text text-lighten-4">This is a simple website that I made instead of studying for my exams. Even though it's made from official data, I cannot guarantee its fairness.</p>
                     </div>
                 </div>
             </div>
