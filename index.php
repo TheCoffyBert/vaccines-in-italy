@@ -1,6 +1,7 @@
 <?php
 
-    $json = file_get_contents("somministrazioni-vaccini-summary-latest.json");
+    //$json = file_get_contents("somministrazioni-vaccini-summary-latest.json");
+    $json = file_get_contents("https://raw.githubusercontent.com/italia/covid19-opendata-vaccini/master/dati/somministrazioni-vaccini-summary-latest.json");
     $data = json_decode($json,true);
 
     $data = $data["data"];
@@ -439,126 +440,147 @@
                         label: 'Abruzzo',
                         fill: false,
                         borderColor: 'rgb(198, 40, 40)',
+                        backgroundColor: 'rgb(198, 40, 40)',
                         data: abruzzo
                     },
                     {
                         label: 'Basilicata',
                         fill: false,
                         borderColor: 'rgb(255, 82, 82)',
+                        backgroundColor: 'rgb(255, 82, 82)',
                         data: basilicata
                     },
                     {
                         label: 'Calabria',
                         fill: false,
                         borderColor: 'rgb(244, 143, 177)',
+                        backgroundColor: 'rgb(244, 143, 177)',
                         data: calabria
                     },
                     {
                         label: 'Campania',
                         fill: false,
                         borderColor: 'rgb(136, 14, 79)',
+                        backgroundColor: 'rgb(136, 14, 79)',
                         data: campania
                     },
                     {
                         label: 'Emilia-Romagna',
                         fill: false,
                         borderColor: 'rgb(186, 104, 200)',
+                        backgroundColor: 'rgb(186, 104, 200)',
                         data: emiliaromagna
                     },
                     {
                         label: 'Friuli-Venezia Giulia',
                         fill: false,
                         borderColor: 'rgb(83, 109, 254)',
+                        backgroundColor: 'rgb(83, 109, 254)',
                         data: friuliveneziagiulia
                     },
                     {
                         label: 'Lazio',
                         fill: false,
                         borderColor: 'rgb(33, 150, 243)',
+                        backgroundColor: 'rgb(33, 150, 243)',
                         data: lazio
                     },
                     {
                         label: 'Liguria',
                         fill: false,
                         borderColor: 'rgb(64, 196, 255)',
+                        backgroundColor: 'rgb(64, 196, 255)',
                         data: liguria
                     },
                     {
                         label: 'Lombardia',
                         fill: false,
                         borderColor: 'rgb(0, 172, 193)',
+                        backgroundColor: 'rgb(0, 172, 193)',
                         data: lombardia
                     },
                     {
                         label: 'Marche',
                         fill: false,
                         borderColor: 'rgb(29, 233, 182)',
+                        backgroundColor: 'rgb(29, 233, 182)',
                         data: marche
                     },
                     {
                         label: 'Molise',
                         fill: false,
                         borderColor: 'rgb(0, 230, 118)',
+                        backgroundColor: 'rgb(0, 230, 118)',
                         data: molise
                     },
                     {
                         label: 'Piemonte',
                         fill: false,
                         borderColor: 'rgb(118, 255, 3)',
+                        backgroundColor: 'rgb(118, 255, 3)',
                         data: piemonte
                     },
                     {
                         label: 'Puglia',
                         fill: false,
                         borderColor: 'rgb(251, 192, 45)',
+                        backgroundColor: 'rgb(251, 192, 45)',
                         data: puglia
                     },
                     {
                         label: 'Sardegna',
                         fill: false,
                         borderColor: 'rgb(255, 255, 0)',
+                        backgroundColor: 'rgb(255, 255, 0)',
                         data: sardegna
                     },
                     {
                         label: 'Sicilia',
                         fill: false,
                         borderColor: 'rgb(239, 108, 0)',
+                        backgroundColor: 'rgb(239, 108, 0)',
                         data: sicilia
                     },
                     {
                         label: 'Toscana',
                         fill: false,
                         borderColor: 'rgb(84, 110, 122)',
+                        backgroundColor: 'rgb(84, 110, 122)',
                         data: toscana
                     },
                     {
                         label: 'Umbria',
                         fill: false,
                         borderColor: 'rgb(189, 189, 189)',
+                        backgroundColor: 'rgb(189, 189, 189)',
                         data: umbria
                     },
                     {
                         label: 'Valle d\'Aosta',
                         fill: false,
                         borderColor: 'rgb(238, 255, 65)',
+                        backgroundColor: 'rgb(238, 255, 65)',
                         data: valledaAosta
                     },
                     {
                         label: 'Veneto',
                         fill: false,
                         borderColor: 'rgb(1, 87, 155)',
+                        backgroundColor: 'rgb(1, 87, 155)',
                         data: veneto
                     },
                     {
                         label: 'P.A. Bolzano',
                         fill: false,
                         borderColor: 'rgb(197, 17, 98)',
+                        backgroundColor: 'rgb(197, 17, 98)',
                         data: pab
                     },
                     {
                         label: 'P.A. Trento',
                         fill: false,
                         borderColor: 'rgb(255, 99, 132)',
+                        backgroundColor: 'rgb(255, 99, 132)',
                         data: pat
                     }
                 ]
