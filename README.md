@@ -1,2 +1,2 @@
 # vaccines-in-italy
-A simple (and poorly done) dashboard for checking the vaccines roll-out in Italy
+A simple (and poorly done) dashboard to check the vaccines' roll-out in Italy
