@@ -28,118 +28,313 @@
     $jsDates = json_encode($dates);
 
     $abruzzo = array();
+    foreach ($dates as $d) {
+        $abruzzo[$d] = 0;
+    }
+
     $basilicata = array();
+    foreach ($dates as $d) {
+        $basilicata[$d] = 0;
+    }
+
     $calabria = array();
+    foreach ($dates as $d) {
+        $calabria[$d] = 0;
+    }
+
     $campania = array();
+    foreach ($dates as $d) {
+        $campania[$d] = 0;
+    }
+
     $emiliaromagna = array();
+    foreach ($dates as $d) {
+        $emiliaromagna[$d] = 0;
+    }
+
     $friuliveneziagiulia = array();
+    foreach ($dates as $d) {
+        $friuliveneziagiulia[$d] = 0;
+    }
+
     $lazio = array();
+    foreach ($dates as $d) {
+        $lazio[$d] = 0;
+    }
+
     $liguria = array();
+    foreach ($dates as $d) {
+        $liguria[$d] = 0;
+    }
+
     $lombardia = array();
+    foreach ($dates as $d) {
+        $lombardia[$d] = 0;
+    }
+
     $marche = array();
+    foreach ($dates as $d) {
+        $marche[$d] = 0;
+    }
+
     $molise = array();
+    foreach ($dates as $d) {
+        $molise[$d] = 0;
+    }
+
     $piemonte = array();
+    foreach ($dates as $d) {
+        $piemonte[$d] = 0;
+    }
+
     $puglia = array();
+    foreach ($dates as $d) {
+        $puglia[$d] = 0;
+    }
+
     $sardegna = array();
+    foreach ($dates as $d) {
+        $sardegna[$d] = 0;
+    }
+
     $sicilia = array();
+    foreach ($dates as $d) {
+        $sicilia[$d] = 0;
+    }
+
     $toscana = array();
+    foreach ($dates as $d) {
+        $toscana[$d] = 0;
+    }
+
     $umbria = array();
+    foreach ($dates as $d) {
+        $umbria[$d] = 0;
+    }
+
     $valledaAosta = array();
+    foreach ($dates as $d) {
+        $valledaAosta[$d] = 0;
+    }
+
     $veneto = array();
+    foreach ($dates as $d) {
+        $veneto[$d] = 0;
+    }
+
     $pab = array();
+    foreach ($dates as $d) {
+        $pab[$d] = 0;
+    }
+
     $pat = array();
+    foreach ($dates as $d) {
+        $pat[$d] = 0;
+    }
 
     foreach ($data as $d) {
+
+        $data_somministrazione = $d["data_somministrazione"];
+        $data_somministrazione = str_replace("T", " ", $data_somministrazione);
+        $data_somministrazione = str_replace(".000Z", "", $data_somministrazione);
+
+        $index = date("d/m/Y", strtotime($data_somministrazione));
+
         switch ($d["area"]){
             case "ABR":
-                $abruzzo[] = $d["totale"];
+                $abruzzo[$index] = $d["totale"];
                 break;
             case "BAS":
-                $basilicata[] = $d["totale"];
+                $basilicata[$index] = $d["totale"];
                 break;
             case "CAL":
-                $calabria[] = $d["totale"];
+                $calabria[$index] = $d["totale"];
                 break;
             case "CAM":
-                $campania[] = $d["totale"];
+                $campania[$index] = $d["totale"];
                 break;
             case "EMR":
-                $emiliaromagna[] = $d["totale"];
+                $emiliaromagna[$index] = $d["totale"];
                 break;
             case "FVG":
-                $friuliveneziagiulia[] = $d["totale"];
+                $friuliveneziagiulia[$index] = $d["totale"];
                 break;
             case "LAZ":
-                $lazio[] = $d["totale"];
+                $lazio[$index] = $d["totale"];
                 break;
             case "LIG":
-                $liguria[] = $d["totale"];
+                $liguria[$index] = $d["totale"];
                 break;
             case "LOM":
-                $lombardia[] = $d["totale"];
+                $lombardia[$index] = $d["totale"];
                 break;
             case "MAR":
-                $marche[] = $d["totale"];
+                $marche[$index] = $d["totale"];
                 break;
             case "MOL":
-                $molise[] = $d["totale"];
+                $molise[$index] = $d["totale"];
                 break;
             case "PIE":
-                $piemonte[] = $d["totale"];
+                $piemonte[$index] = $d["totale"];
                 break;
             case "PUG":
-                $puglia[] = $d["totale"];
+                $puglia[$index] = $d["totale"];
                 break;
             case "SAR":
-                $sardegna[] = $d["totale"];
+                $sardegna[$index] = $d["totale"];
                 break;
             case "SIC":
-                $sicilia[] = $d["totale"];
+                $sicilia[$index] = $d["totale"];
                 break;
             case "TOS":
-                $toscana[] = $d["totale"];
+                $toscana[$index] = $d["totale"];
                 break;
             case "UMB":
-                $umbria[] = $d["totale"];
+                $umbria[$index] = $d["totale"];
                 break;
             case "VDA":
-                $valledaAosta[] = $d["totale"];
+                $valledaAosta[$index] = $d["totale"];
                 break;
             case "VEN":
-                $veneto[] = $d["totale"];
+                $veneto[$index] = $d["totale"];
                 break;
             case "PAB":
-                $pab[] = $d["totale"];
+                $pab[$index] = $d["totale"];
                 break;
             case "PAT":
-                $pat[] = $d["totale"];
+                $pat[$index] = $d["totale"];
                 break;
             default:
                 break;
         }
     }
 
-    $abruzzo = json_encode($abruzzo);
-    $basilicata = json_encode($basilicata);
-    $calabria = json_encode($calabria);
-    $campania = json_encode($campania);
-    $emiliaromagna = json_encode($emiliaromagna);
-    $friuliveneziagiulia = json_encode($friuliveneziagiulia);
-    $lazio = json_encode($lazio);
-    $liguria = json_encode($liguria);
-    $lombardia = json_encode($lombardia);
-    $marche = json_encode($marche);
-    $molise = json_encode($molise);
-    $piemonte = json_encode($piemonte);
-    $puglia = json_encode($puglia);
-    $sardegna = json_encode($sardegna);
-    $sicilia = json_encode($sicilia);
-    $toscana = json_encode($toscana);
-    $umbria = json_encode($umbria);
-    $valledaAosta = json_encode($valledaAosta);
-    $veneto = json_encode($veneto);
-    $pab = json_encode($pab);
-    $pat = json_encode($pat);
+    $abruzzoVal = array();
+    foreach ($abruzzo as $key => $value) {
+        $abruzzoVal[] = $value;
+    }
+
+    $basilicataVal = array();
+    foreach ($basilicata as $key => $value) {
+        $basilicataVal[] = $value;
+    }
+
+    $calabriaVal = array();
+    foreach ($calabria as $key => $value) {
+        $calabriaVal[] = $value;
+    }
+
+    $campaniaVal = array();
+    foreach ($campania as $key => $value) {
+        $campaniaVal[] = $value;
+    }
+
+    $emiliaromagnaVal = array();
+    foreach ($emiliaromagna as $key => $value) {
+        $emiliaromagnaVal[] = $value;
+    }
+
+    $friuliveneziagiuliaVal = array();
+    foreach ($friuliveneziagiulia as $key => $value) {
+        $friuliveneziagiuliaVal[] = $value;
+    }
+
+    $lazioVal = array();
+    foreach ($lazio as $key => $value) {
+        $lazioVal[] = $value;
+    }
+
+    $liguriaVal = array();
+    foreach ($liguria as $key => $value) {
+        $liguriaVal[] = $value;
+    }
+
+    $lombardiaVal = array();
+    foreach ($lombardia as $key => $value) {
+        $lombardiaVal[] = $value;
+    }
+
+    $marcheVal = array();
+    foreach ($marche as $key => $value) {
+        $marcheVal[] = $value;
+    }
+
+    $moliseVal = array();
+    foreach ($molise as $key => $value) {
+        $moliseVal[] = $value;
+    }
+
+    $piemonteVal = array();
+    foreach ($piemonte as $key => $value) {
+        $piemonteVal[] = $value;
+    }
+
+    $pugliaVal = array();
+    foreach ($puglia as $key => $value) {
+        $pugliaVal[] = $value;
+    }
+
+    $sardegnaVal = array();
+    foreach ($sardegna as $key => $value) {
+        $sardegnaVal[] = $value;
+    }
+
+    $siciliaVal = array();
+    foreach ($sicilia as $key => $value) {
+        $siciliaVal[] = $value;
+    }
+
+    $toscanaVal = array();
+    foreach ($toscana as $key => $value) {
+        $toscanaVal[] = $value;
+    }
+
+    $umbriaVal = array();
+    foreach ($umbria as $key => $value) {
+        $umbriaVal[] = $value;
+    }
+
+    $valledaAostaVal = array();
+    foreach ($valledaAosta as $key => $value) {
+        $valledaAostaVal[] = $value;
+    }
+
+    $venetoVal = array();
+    foreach ($veneto as $key => $value) {
+        $venetoVal[] = $value;
+    }
+
+    $pabVal = array();
+    foreach ($pab as $key => $value) {
+        $pabVal[] = $value;
+    }
+
+    $patVal = array();
+    foreach ($pat as $key => $value) {
+        $patVal[] = $value;
+    }
+
+    $abruzzo = json_encode($abruzzoVal);
+    $basilicata = json_encode($basilicataVal);
+    $calabria = json_encode($calabriaVal);
+    $campania = json_encode($campaniaVal);
+    $emiliaromagna = json_encode($emiliaromagnaVal);
+    $friuliveneziagiulia = json_encode($friuliveneziagiuliaVal);
+    $lazio = json_encode($lazioVal);
+    $liguria = json_encode($liguriaVal);
+    $lombardia = json_encode($lombardiaVal);
+    $marche = json_encode($marcheVal);
+    $molise = json_encode($moliseVal);
+    $piemonte = json_encode($piemonteVal);
+    $puglia = json_encode($pugliaVal);
+    $sardegna = json_encode($sardegnaVal);
+    $sicilia = json_encode($siciliaVal);
+    $toscana = json_encode($toscanaVal);
+    $umbria = json_encode($umbriaVal);
+    $valledaAosta = json_encode($valledaAostaVal);
+    $veneto = json_encode($venetoVal);
+    $pab = json_encode($pabVal);
+    $pat = json_encode($patVal);
 
 
 ?>
@@ -229,7 +424,7 @@
         <?php echo "var pab = ". $pab .";\n"?>
         <?php echo "var pat = ". $pat .";\n"?>
 
-        console.log(labelsArray);
+        console.log(abruzzo);
 
         var ctx = document.getElementById('myChart').getContext('2d');
         var chart = new Chart(ctx, {
