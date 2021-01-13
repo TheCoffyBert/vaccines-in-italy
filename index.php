@@ -550,13 +550,13 @@
                         data: veneto
                     },
                     {
-                        label: 'Provincia Autonoma di Bolzano',
+                        label: 'P.A. Bolzano',
                         fill: false,
                         borderColor: 'rgb(197, 17, 98)',
                         data: pab
                     },
                     {
-                        label: 'Provincia Autonoma di Trento',
+                        label: 'P.A. Trento',
                         fill: false,
                         borderColor: 'rgb(255, 99, 132)',
                         data: pat
@@ -565,7 +565,12 @@
             },
 
             // Configuration options go here
-            options: {}
+            options: {
+                responsive: true,
+                legend: {
+                    position: 'left',
+                }
+            }
         });
     </script>
 
